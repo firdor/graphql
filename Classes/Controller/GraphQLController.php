@@ -50,6 +50,14 @@ class GraphQLController extends ActionController
      * @var RequestLoggerInterface
      */
     protected $requestLogger;
+	
+    /**
+     * A list of IANA media types which are supported by this controller
+     *
+     * @var array
+     * @see http://www.iana.org/assignments/media-types/index.html
+     */
+    protected $supportedMediaTypes = ['application/json'];
 
     /**
      * phpcs:disable SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification
@@ -100,7 +108,7 @@ class GraphQLController extends ActionController
             $validationRules
         );
 
-        $this->response->setHeader('Content-Type', 'application/json');
+        $this->response->setContentType('application/json');
         return json_encode($result->toArray());
     }
 }
