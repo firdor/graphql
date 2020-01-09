@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace t3n\GraphQL\Service;
 
+use Neos\Flow\Annotations as Flow;
 use GraphQL\Executor\Executor;
 use GraphQL\Type\Definition\ResolveInfo;
 use Neos\Utility\ObjectAccess;
