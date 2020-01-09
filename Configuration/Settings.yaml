@@ -20,7 +20,6 @@ Neos:
                 maximumLogFileSize: 10485760
                 logFilesToKeep: 1
                 logMessageOrigin: false
-
 t3n:
   GraphQL:
     context: 't3n\GraphQL\Context'
@@ -30,3 +29,4 @@ t3n:
 #        'logRequests': true  # if enabled all requests are logged
 #        'context:' 'Foo\Vendor\GraphQL\Context  # optional context that overrides the global context
 #        'schemaEnvelope': 'Some\Fully\Qualified\Namespace'
+#        'errorTransform': t3n\GraphQL\Transform\FlowErrorTransform # optional: override the default error transformer for this schema
